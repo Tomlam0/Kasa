@@ -1,1 +1,27 @@
 @use "../../utils/" as *;
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 80%;
+    margin: auto;
+    margin-top: 45px;
+}
+
+ul {
+    display: flex;
+    gap: 57px;
+
+    li {
+        a {
+            color: map-get($colors, primary);
+            @include font(24px, 500);
+
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}

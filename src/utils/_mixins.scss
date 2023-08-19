@@ -1,7 +1,7 @@
-//Fonts
 
-@mixin font($size, $weight: normal, $color: primary) {
+//Fonts
+// for font-weight : 400 regular, 500 or 700 only
+@mixin font($size, $weight: normal) {
     font-size: $size;
     font-weight: $weight;
-    color: map-get($colors, $color);
 }
