@@ -5,22 +5,42 @@
     justify-content: space-between;
     align-items: center;
 
-    max-width: 80%;
+    max-width: 80vw;
     margin: auto;
     margin-top: 45px;
-}
 
-ul {
-    display: flex;
-    gap: 57px;
+    @include mobile {
+        max-width: 90vw;
+        margin-top: 20px;
+    }
 
-    li {
-        a {
-            color: map-get($colors, primary);
-            @include font(24px, 500);
+    .logo {
+        @include mobile {
+            max-width: 35vw;
+        }
+    }
 
-            &.active {
-                text-decoration: underline;
+    ul {
+        display: flex;
+        gap: 57px;
+
+        @include mobile {
+            gap: 26px;
+        }
+
+        li {
+            a {
+                color: map-get($colors, primary);
+                @include font(24px, 500);
+
+                &.active {
+                    text-decoration: underline;
+                }
+
+                @include mobile {
+                    text-transform: uppercase;
+                    @include font(12px, 500);
+                }
             }
         }
     }
