@@ -1,1 +1,6 @@
-@use "/src/components/Header/Header";
+@use "/src/base/reset";
+@use "/src/base/global";
+@use "/src/base/typography";
+
+@use "/src/components/Header/header";
+@use "/src/components/Footer/footer";
