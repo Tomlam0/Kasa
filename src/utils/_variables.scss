@@ -2,8 +2,14 @@
 
 $colors: (
     primary: #ff6060,
-    bloc-bg : #F6F6F6,
+    bloc-bg: #f6f6f6,
     footer: #000,
-    basic-text: #FFF,
+    basic-text: #fff,
+
+    bloc-gradient:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+        ),
 );
-  
