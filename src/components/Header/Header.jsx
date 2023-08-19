@@ -1,6 +1,6 @@
 import React from "react";
 
-const Logo = () => {
+const Header = () => {
     return (
         <div className="logo">
             <img src={require("../../assets/img/logo.png")} alt="logo kasa" />
@@ -8,4 +8,4 @@ const Logo = () => {
     );
 };
 
-export default Logo;
+export default Header;
