@@ -2,11 +2,11 @@ import React from "react";
 
 import { Link, NavLink } from "react-router-dom";
 
-import logo from "../../assets/img/logo.png";
+import logo from "../../assets/img/logo.svg";
 
 const Header = () => {
     return (
-        <div id="header">
+        <header id="header">
             <Link to="/">
                 <img src={logo} className="logo" alt="logo kasa" />
             </Link>
@@ -35,7 +35,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 };
 
