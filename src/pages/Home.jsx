@@ -7,14 +7,15 @@ import Card from "../components/Card/Card";
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Header />
-            <Banner />
-            <Card />
+            <main>
+                <Banner />
+                <Card />
+            </main>
             <Footer />
-        </div>
+        </>
     );
 };
 
 export default Home;
- 

@@ -7,12 +7,14 @@ import Collapse from "../components/Collapse/Collapse";
 
 const About = () => {
     return (
-        <div>
+        <>
             <Header />
-            <Banner />
-            <Collapse />
+            <main>
+                <Banner />
+                <Collapse />
+            </main>
             <Footer />
-        </div>
+        </>
     );
 };
 

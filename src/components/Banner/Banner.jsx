@@ -29,7 +29,7 @@ const Banner = () => {
                 alt="bannière accueil paysage"
                 className={currentPath === "/about" ? "about-banner" : ""} // Ajoute une class uniquement pour la banner du path about
             />
-            <p>{text}</p>
+            <h1>{text}</h1>
         </section>
     );
 };
