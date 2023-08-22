@@ -26,6 +26,10 @@
         color: map-get($colors, basic-text);
         @include font(48px, 500);
 
+        @include tablet {
+            @include font(36px, 500);
+        }
+
         @include mobile {
             @include font(24px, 500);
             text-align: left;

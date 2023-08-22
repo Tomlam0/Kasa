@@ -33,6 +33,10 @@
                 color: map-get($colors, primary);
                 @include font(24px, 500);
 
+                &:hover {
+                    color: darken(map-get($colors, primary), 20);
+                }
+
                 &.active {
                     text-decoration: underline;
                 }
