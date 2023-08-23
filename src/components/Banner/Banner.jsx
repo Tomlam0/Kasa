@@ -2,8 +2,8 @@ import React from "react";
 
 import { useLocation } from "react-router-dom";
 
-import bannerHome from "../../assets/img/banner-home.webp";
-import bannerAbout from "../../assets/img/banner-about.webp";
+import bannerHome from "../../assets/img/Banner/banner-home.webp";
+import bannerAbout from "../../assets/img/Banner/banner-about.webp";
 
 const Banner = () => {
     const location = useLocation();
