@@ -1,22 +1,17 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
+import locationData from "../../assets/data/logements.json";
 
 const Card = () => {
-    //locationData sera un tableau vide lors du premier rendu
-    const [locationData, setLocationData] = useState([]);
+    const [locations, setLocations] = useState([]);
 
     useEffect(() => {
-        async function fetchData() {
-            const response = await fetch("logements.json");
-            const data = await response.json();
-            setLocationData(data);
-        }
-        fetchData();
+        setLocations(locationData);
     }, []);
 
     return (
         <section className="card-container">
-            {locationData.map((location, index) => (
+            {locations.map((location, index) => (
                 <div className="card" key={index}>
                     <div className="card-overlay">
                         <img

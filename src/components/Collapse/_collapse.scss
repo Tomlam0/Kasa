@@ -1,1 +1,11 @@
 @use "../../utils/" as *;
+
+.collapse-container {
+    .content-active {
+        display: none;
+    }
+
+    .chevron-down {
+        display: none;
+    }
+}
