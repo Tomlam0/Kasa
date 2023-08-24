@@ -2,8 +2,9 @@
 @use "/src/base/global";
 @use "/src/base/typography";
 
-@use "/src/components/Collapse/collapse";
 @use "/src/components/Banner/banner";
 @use "/src/components/Card/card";
+@use "/src/components/Collapse/collapse";
+@use "/src/components/Error404/error404";
 @use "/src/components/Footer/footer";
 @use "/src/components/Header/header";
