@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import locationData from "../../assets/data/logements.json";
 
 const Card = () => {
     const [locations, setLocations] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         setLocations(locationData);
@@ -12,7 +15,11 @@ const Card = () => {
     return (
         <section className="card-container">
             {locations.map((location, index) => (
-                <div className="card" key={index}>
+                <div
+                    className="card"
+                    key={index}
+                    onClick={() => navigate("/logement/:id")}
+                >
                     <div className="card-overlay">
                         <img
                             src={location.cover}

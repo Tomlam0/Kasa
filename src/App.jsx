@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import Housing from "./pages/Housing";
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/logement/:id" element={<Housing />} />
                 {/* Toute autres pages que celles mentionnées seront des pages d'erreur 404 */}
                 <Route path="*" element={<NotFound />} />
             </Routes>
