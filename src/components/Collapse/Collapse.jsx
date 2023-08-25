@@ -5,7 +5,7 @@ import collapseData from "../../assets/data/collapse.json";
 import chevron from "../../assets/img/Icons/chevronUp.svg";
 
 // On définir la prop "collapsible" pour le réutiliser dans la page produit
-const Collapse = ({ collapsible }) => {
+const Collapse = () => {
     // Création d'un tableau d'états pour suivre l'état de chaque collapse individuellement
     // On map les données du JSON et on le déclare en false car de base il est fermé
     const [isOpen, setIsOpen] = useState(collapseData.map(() => false));
@@ -14,6 +14,7 @@ const Collapse = ({ collapsible }) => {
     // index est natif a la fonction map précédante
     const toggleCollapse = (index) => {
         const newIsOpen = [...isOpen];
+        // si la valeur était a false elle passe a true
         newIsOpen[index] = !newIsOpen[index];
         setIsOpen(newIsOpen);
     };
