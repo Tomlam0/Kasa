@@ -1,20 +1,15 @@
 import React from "react";
 
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import Layout from "../../components/Layout";
 import Banner from "../../components/Banner/Banner";
 import Collapse from "../../components/Collapse/Collapse";
 
 const About = () => {
     return (
-        <>
-            <Header />
-            <main>
-                <Banner />
-                <Collapse />
-            </main>
-            <Footer />
-        </>
+        <Layout>
+            <Banner />
+            <Collapse />
+        </Layout>
     );
 };
 

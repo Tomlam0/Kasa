@@ -1,18 +1,13 @@
 import React from "react";
 
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import Layout from "../../components/Layout";
 import Error404 from "../../components/Error404/Error404";
 
 const NotFound = () => {
     return (
-        <>
-            <Header />
-            <main>
-                <Error404 />
-            </main>
-            <Footer />
-        </>
+        <Layout>
+            <Error404 />
+        </Layout>
     );
 };
 
