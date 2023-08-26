@@ -1,0 +1,21 @@
+@use "../../utils/" as *;
+
+.collapse {
+    display: flex;
+    gap: 76px;
+    margin-top: 24px;
+
+    @include mobile {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // Cible directement les enfants div de .collapse
+    > div {
+        width: 580px;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+}

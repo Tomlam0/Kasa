@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Card from "../Card/Card";
 
@@ -10,7 +11,11 @@ const Gallery = () => {
     return (
         <div className={styles.container}>
             {locationData.map((location) => (
-                <Card key={location.id} location={location} />
+                <article key={location.id}>
+                    <Link to={`/logement/${location.id}`}>
+                        <Card image={location.cover} title={location.title} />
+                    </Link>
+                </article>
             ))}
         </div>
     );

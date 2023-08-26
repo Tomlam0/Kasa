@@ -4,10 +4,10 @@ import chevron from "../../assets/img/Icons/chevronUp.svg";
 
 import styles from "./slideshow.module.scss";
 
-const Slideshow = () => {
+const Slideshow = ({ image, title }) => {
     return (
         <div className={styles.container}>
-            <img src="" alt="" className={styles.picture} />
+            <img src={image} alt={title} className={styles.picture} />
             <div className={styles.chevrons}>
                 <img
                     src={chevron}
@@ -26,3 +26,5 @@ const Slideshow = () => {
 };
 
 export default Slideshow;
+
+// Onclick sur les chevrons

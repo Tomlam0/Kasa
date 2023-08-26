@@ -18,9 +18,11 @@
 
     margin: auto;
     margin-block: 38px;
+    width: 70vw;
 
     @include mobile {
         gap: 20px;
+        width: 100%;
         margin-block: 19px;
     }
 }

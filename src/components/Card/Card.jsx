@@ -1,24 +1,13 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
-
 import styles from "./card.module.scss";
 
-const Card = ({ location }) => {
-    const navigate = useNavigate();
-
+const Card = ({ image, title }) => {
     return (
-        <div
-            className={styles.card}
-            onClick={() => navigate("/logement/" + location.id)}
-        >
+        <div className={styles.card}>
             <div className={styles.cardOverlay}>
-                <img
-                    src={location.cover}
-                    alt={location.title}
-                    className={styles.picture}
-                />
-                <h2 className={styles.title}>{location.title}</h2>
+                <img className={styles.picture} src={image} alt={title} />
+                <h2 className={styles.title}>{title}</h2>
             </div>
         </div>
     );
