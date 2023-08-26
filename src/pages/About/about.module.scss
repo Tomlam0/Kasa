@@ -1,0 +1,14 @@
+@use "../../utils/" as *;
+
+.banner {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 43px;
+
+    @include mobile {
+        width: 90%;
+        margin-top: 27px;
+        margin-bottom: 22px;
+    }
+}

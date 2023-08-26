@@ -7,6 +7,10 @@ import About from "./pages/About/About";
 import NotFound from "./pages/NotFound/NotFound";
 import Housing from "./pages/Housing/Housing";
 
+import "./base/global.scss";
+import "./base/reset.scss";
+import "./base/typography.scss";
+
 export default function App() {
     return (
         <BrowserRouter>

@@ -20,7 +20,7 @@ const Collapse = () => {
     };
 
     return (
-        <section className="collapse-container">
+        <section className="collapse-container collapse-container-about">
             {collapseData.map((data, index) => (
                 <div className="collapse-item" key={data.id}>
                     <div className="collapse-bloc-title">

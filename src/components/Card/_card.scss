@@ -1,29 +1,22 @@
 @use "../../utils/" as *;
 
 .card-container {
-    max-width: 80vw;
-    margin: auto;
-    margin-bottom: 50px;
-    padding: 50px 56px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
 
     background-color: map-get($colors, bloc-bg);
     border-radius: 25px;
+    padding: 50px 56px;
 
     @include tablet {
         grid-template-columns: repeat(2, 1fr);
     }
 
     @include mobile {
-        max-width: 90vw;
-        margin-bottom: 27px;
-        padding: 0px;
-
         grid-template-columns: 1fr;
         gap: 20px;
+        padding: 0px;
 
         background-color: #fff;
     }

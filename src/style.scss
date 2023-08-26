@@ -1,8 +1,8 @@
-@use "/src/base/reset";
-@use "/src/base/global";
-@use "/src/base/typography";
+// @use "/src/base/reset";
+// @use "/src/base/global";
+// @use "/src/base/typography";
 
-@use "/src/components/Banner/banner";
+// @use "/src/components/Banner/banner";
 @use "/src/components/Card/card";
 @use "/src/components/Collapse/collapse";
 @use "/src/components/Error404/error404";
@@ -10,7 +10,7 @@
 @use "/src/components/Header/header";
 @use "/src/components/Slideshow/slideshow";
 
-@use "/src/pages/About/about";
-@use "/src/pages/Home/home";
+// @use "/src/pages/About/about";
+// @use "/src/pages/Home/home";
 @use "/src/pages/Housing/housing";
 @use "/src/pages/NotFound/notfound";

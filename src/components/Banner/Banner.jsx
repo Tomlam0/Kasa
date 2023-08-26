@@ -1,36 +1,13 @@
 import React from "react";
 
-import { useLocation } from "react-router-dom";
+import styles from "./banner.module.scss";
 
-import bannerHome from "../../assets/img/Banner/banner-home.webp";
-import bannerAbout from "../../assets/img/Banner/banner-about.webp";
-
-const Banner = () => {
-    const location = useLocation();
-    const currentPath = location.pathname;
-
-    let text = ""; // Définit vide pour qu'il soit déclaré uniquement dans Home par la suite
-    let bannerImage = null;
-
-    // Condition pour savoir quelle banière afficher en fonction de la route
-    if (currentPath === "/") {
-        bannerImage = bannerHome;
-        text = "Chez vous,\n partout et ailleurs";
-    } else if (currentPath === "/about") {
-        bannerImage = bannerAbout;
-    } else {
-        bannerImage = bannerHome;
-    }
-
+const Banner = ({ image, text }) => {
     return (
-        <section id="banner">
-            <img
-                src={bannerImage}
-                alt="bannière accueil paysage"
-                className={currentPath === "/about" ? "about-banner" : ""} // Ajoute une class uniquement pour la banner du path about
-            />
-            <h1>{text}</h1>
-        </section>
+        <div className={styles.container}>
+            <img src={image} alt="bannière paysage" className={styles.img} />
+            <h1 className={styles.text}>{text}</h1>
+        </div>
     );
 };
 

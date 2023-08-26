@@ -13,12 +13,12 @@ const Card = () => {
     }, []);
 
     return (
-        <section className="card-container">
+        <section className="card-container card-container-home">
             {locations.map((location, index) => (
                 <div
                     className="card"
                     key={index}
-                    onClick={() => navigate("/logement/:id")}
+                    onClick={() => navigate("/logement/" + location.id)}
                 >
                     <div className="card-overlay">
                         <img
