@@ -1,20 +1,16 @@
 @use "../../utils/" as *;
 
-.error-container {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 139px;
-    margin-top: 139px;
-    margin-bottom: 139px;
 
     @include mobile {
         gap: 113px;
-        margin-top: 113px;
-        margin-bottom: 113px;
     }
 
-    .error-404 {
+    .text404 {
         @include font(288px, 700);
         color: map-get($colors, primary);
 
@@ -26,7 +22,8 @@
             @include font(96px, 700);
         }
     }
-    .error-tagline {
+
+    .tagline {
         @include font(36px, 500);
         color: map-get($colors, primary);
 
@@ -41,7 +38,7 @@
             max-width: 70vw;
         }
     }
-    .error-backward {
+    .backwardLink {
         @include font(18px, 500);
         color: map-get($colors, primary);
         text-decoration: underline;

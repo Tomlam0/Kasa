@@ -1,11 +1,16 @@
 @use "../../utils/" as *;
 
-#footer {
+.container {
     background: map-get($colors, footer);
     height: 209px;
     padding-top: 66px;
+    margin-top: 50px;
 
-    .logo-block {
+    @include mobile {
+        margin-top: 27px;
+    }
+
+    .contentWrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -17,14 +22,14 @@
         }
     }
 
-    p {
+    .text {
         color: map-get($colors, basic-text);
         @include font(24px, 500);
 
         @include mobile {
             @include font(12px);
             max-width: 100px;
+            line-height: 17px;
         }
     }
 }
- 

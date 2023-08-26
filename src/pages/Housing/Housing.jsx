@@ -1,17 +1,18 @@
 import React from "react";
 
-import Layout from "../../components/Layout";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Collapse from "../../components/Collapse/Collapse";
 
+import styles from "./housing.module.scss"
+
 const Housing = () => {
     return (
-        <Layout>
-            <section className="housing-container">
+        <>
+            <section className={styles.container}>
                 <Slideshow />
                 <Collapse />
             </section>
-        </Layout>
+        </>
     );
 };
 

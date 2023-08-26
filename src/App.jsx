@@ -10,19 +10,22 @@ import Housing from "./pages/Housing/Housing";
 import "./base/global.scss";
 import "./base/reset.scss";
 import "./base/typography.scss";
+import Layout from "./components/Layout/Layout";
 
 export default function App() {
     return (
         <BrowserRouter>
-            {/* Si une erreur quelconque arrive en cours de route */}
-            <Routes errorElement={<NotFound />}>
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/logement/:id" element={<Housing />} />
-                {/* Toute autres pages que celles mentionnées seront des pages d'erreur 404 */}
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Layout>
+                {/* Si une erreur quelconque arrive en cours de route */}
+                <Routes errorElement={<NotFound />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/logement/:id" element={<Housing />} />
+                    {/* Toute autres pages que celles mentionnées seront des pages d'erreur 404 */}
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Layout>
         </BrowserRouter>
     );
 }

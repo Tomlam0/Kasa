@@ -1,16 +1,14 @@
 @use "../../utils/" as *;
 
-#header {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    max-width: 80vw;
     margin: auto;
     margin-top: 45px;
 
     @include mobile {
-        max-width: 90vw;
         margin-top: 20px;
     }
 
@@ -20,7 +18,7 @@
         }
     }
 
-    ul {
+    .navlist {
         display: flex;
         gap: 57px;
 
@@ -28,8 +26,8 @@
             gap: 26px;
         }
 
-        li {
-            a {
+        .item {
+            .link {
                 color: map-get($colors, primary);
                 @include font(24px, 500);
 
@@ -37,13 +35,13 @@
                     color: darken(map-get($colors, primary), 20);
                 }
 
-                &.active {
-                    text-decoration: underline;
-                }
-
                 @include mobile {
                     text-transform: uppercase;
                     @include font(12px, 500);
+                }
+
+                &.activeLink {
+                    text-decoration: underline;
                 }
             }
         }

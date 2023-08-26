@@ -2,23 +2,25 @@ import React from "react";
 
 import chevron from "../../assets/img/Icons/chevronUp.svg";
 
+import styles from "./slideshow.module.scss";
+
 const Slideshow = () => {
     return (
-        <div className="slideshow-container">
-            <img src="" alt="" className="slideshow-picture" />
-            <div className="chevron-container">
+        <div className={styles.container}>
+            <img src="" alt="" className={styles.picture} />
+            <div className={styles.chevrons}>
                 <img
                     src={chevron}
                     alt="Icone chevron"
-                    className="chevron-left"
+                    className={styles.chevronLeft}
                 />
                 <img
                     src={chevron}
                     alt="Icone chevron"
-                    className="chevron-right"
+                    className={styles.chevronRight}
                 />
             </div>
-            <p className="slideshow-count">1/4</p>
+            <p className={styles.count}>1/4</p>
         </div>
     );
 };

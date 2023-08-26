@@ -1,16 +1,13 @@
 @use "../../utils/" as *;
 
-.slideshow-container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
 
-    max-width: 80vw;
     margin: auto;
     height: 415px;
-    margin-top: 50px;
-    margin-bottom: 24px;
 
     background: #000;
     border-radius: 25px;
@@ -20,11 +17,11 @@
         height: 255px;
     }
 
-    .chevron-container {
+    .chevrons {
         display: flex;
         justify-content: space-between;
 
-        .chevron-left {
+        .chevronLeft {
             width: 79px;
             transform: rotate(-90deg);
 
@@ -33,7 +30,7 @@
             }
         }
 
-        .chevron-right {
+        .chevronRight {
             width: 79px;
             transform: rotate(90deg);
 
@@ -43,7 +40,7 @@
         }
     }
 
-    .slideshow-count {
+    .count {
         position: absolute;
         bottom: 25px;
         left: 50%;

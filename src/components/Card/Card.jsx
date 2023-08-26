@@ -1,36 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import locationData from "../../assets/data/logements.json";
+import styles from "./card.module.scss";
 
-const Card = () => {
-    const [locations, setLocations] = useState([]);
+const Card = ({ location }) => {
     const navigate = useNavigate();
 
-    useEffect(() => {
-        setLocations(locationData);
-    }, []);
-
     return (
-        <section className="card-container card-container-home">
-            {locations.map((location, index) => (
-                <div
-                    className="card"
-                    key={index}
-                    onClick={() => navigate("/logement/" + location.id)}
-                >
-                    <div className="card-overlay">
-                        <img
-                            src={location.cover}
-                            alt={location.title}
-                            className="card-picture"
-                        />
-                        <h2 className="card-title">{location.title}</h2>
-                    </div>
-                </div>
-            ))}
-        </section>
+        <div
+            className={styles.card}
+            onClick={() => navigate("/logement/" + location.id)}
+        >
+            <div className={styles.cardOverlay}>
+                <img
+                    src={location.cover}
+                    alt={location.title}
+                    className={styles.picture}
+                />
+                <h2 className={styles.title}>{location.title}</h2>
+            </div>
+        </div>
     );
 };
 

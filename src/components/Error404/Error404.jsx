@@ -2,19 +2,21 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import styles from "./error404.module.scss";
+
 const Error404 = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="error-container">
-            <p className="error-404">404</p>
-            <p className="error-tagline">
+        <div className={styles.container}>
+            <p className={styles.text404}>404</p>
+            <p className={styles.tagline}>
                 Oups! La page que vous demandez n'existe pas.
             </p>
-            <p className="error-backward" onClick={() => navigate("/")}>
+            <p className={styles.backwardLink} onClick={() => navigate("/")}>
                 Retourner sur la page d’accueil
             </p>
-        </section>
+        </div>
     );
 };
 

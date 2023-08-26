@@ -1,0 +1,9 @@
+@use "../../utils/" as *;
+
+.wrapper {
+    margin-inline: 100px;
+
+    @include mobile {
+        margin-inline: 20px;
+    }
+}
