@@ -3,3 +3,17 @@
 .container {
     margin-top: 50px;
 }
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    margin: auto;
+    margin-block: 38px;
+
+    @include mobile {
+        gap: 20px;
+        margin-block: 19px;
+    }
+}

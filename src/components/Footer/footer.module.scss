@@ -4,11 +4,6 @@
     background: map-get($colors, footer);
     height: 209px;
     padding-top: 66px;
-    margin-top: 50px;
-
-    @include mobile {
-        margin-top: 27px;
-    }
 
     .contentWrapper {
         display: flex;

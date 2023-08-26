@@ -13,7 +13,9 @@ const About = () => {
             <section className={styles.banner}>
                 <Banner image={bannerAbout} text="" />
             </section>
-            <Collapse />
+            <section className={styles.collapse}>
+                <Collapse />
+            </section>
         </>
     );
 };

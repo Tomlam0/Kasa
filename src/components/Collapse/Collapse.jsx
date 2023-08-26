@@ -4,7 +4,8 @@ import collapseData from "../../assets/data/collapse.json";
 
 import chevron from "../../assets/img/Icons/chevronUp.svg";
 
-// On définir la prop "collapsible" pour le réutiliser dans la page produit
+import styles from "./collapse.module.scss";
+
 const Collapse = () => {
     // Création d'un tableau d'états pour suivre l'état de chaque collapse individuellement
     // On map les données du JSON et on le déclare en false car de base il est fermé
@@ -20,38 +21,42 @@ const Collapse = () => {
     };
 
     return (
-        <section className="collapse-container collapse-container-about">
+        <>
             {collapseData.map((data, index) => (
-                <div className="collapse-item" key={data.id}>
-                    <div className="collapse-bloc-title">
-                        <h2>{data.title}</h2>
-
-                        <div onClick={() => toggleCollapse(index)}>
-                            <img
-                                src={chevron}
-                                alt="Icone chevron"
-                                className={`chevron ${
-                                    isOpen[index] ? "rotated" : ""
-                                }`}
-                            />
-                        </div>
+                <div className={styles.collapse} key={data.id}>
+                    <div className={styles.blockTitle}>
+                        <h2 className={styles.title}>{data.title}</h2>
+                        <img
+                            onClick={() => toggleCollapse(index)}
+                            src={chevron}
+                            alt="Icone chevron"
+                            className={
+                                isOpen[index]
+                                    ? `${styles.chevron} ${styles.rotated}`
+                                    : styles.chevron
+                            }
+                        />
                     </div>
                     <div
-                        className={`collapse-bloc-content ${
-                            isOpen[index] ? "open" : ""
-                        }`}
+                        className={
+                            isOpen[index]
+                                ? `${styles.blockText} ${styles.open}`
+                                : styles.blockText
+                        }
                     >
                         <h3
-                            className={`collapse-content ${
-                                isOpen[index] ? "open" : ""
-                            }`}
+                            className={
+                                isOpen[index]
+                                    ? `${styles.text} ${styles.open}`
+                                    : styles.text
+                            }
                         >
                             {data.content}
                         </h3>
                     </div>
                 </div>
             ))}
-        </section>
+        </>
     );
 };
 

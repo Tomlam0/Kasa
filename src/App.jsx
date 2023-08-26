@@ -2,6 +2,8 @@ import React from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Layout from "./components/Layout/Layout";
+
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import NotFound from "./pages/NotFound/NotFound";
@@ -10,7 +12,6 @@ import Housing from "./pages/Housing/Housing";
 import "./base/global.scss";
 import "./base/reset.scss";
 import "./base/typography.scss";
-import Layout from "./components/Layout/Layout";
 
 export default function App() {
     return (

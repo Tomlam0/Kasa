@@ -2,14 +2,25 @@
 
 .banner {
     height: 223px;
-
     margin: auto;
     margin-top: 50px;
 
     @include mobile {
         height: 223px;
-
         margin-top: 27px;
-        margin-bottom: 22px;
+    }
+}
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    margin: auto;
+    margin-block: 38px;
+
+    @include mobile {
+        gap: 20px;
+        margin-block: 19px;
     }
 }
