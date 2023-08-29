@@ -5,9 +5,8 @@ import chevron from "../../assets/img/Icons/chevronUp.svg";
 import styles from "./slideshow.module.scss";
 
 const Slideshow = ({ image, title }) => {
-    // Est initialisé a 0 pour représenter la première image
+    // Est initialisé a 0 pour représenter la première image du tableau
     const [current, setCurrent] = useState(0);
-
     const length = image.length;
 
     /**Function pour l'image precedente */
@@ -22,10 +21,25 @@ const Slideshow = ({ image, title }) => {
 
     return (
         <div className={styles.container}>
-            <img src={image[current]} alt={title} className={styles.picture} />
+            {/* ce slider sert uniquement à stocker toutes les photos pour l'animation */}
+            <div
+                className={styles.slider}
+                // style inline qui permet d'avoir un slide horizontal
+                style={{ transform: `translateX(-${current * 100}%)` }}
+            >
+                {/* on map justement pour que le slider contienne toutes les images de la location */}
+                {image.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt={title}
+                        className={styles.picture}
+                    />
+                ))}
+            </div>
 
             <div className={styles.chevrons}>
-                {/* le short circuiting permet de ne pas afficher les chevrons si il n'y qu'une image */}
+                {/* le short circuiting && permet de ne pas afficher les chevrons si il n'y qu'une image */}
                 {length > 1 && (
                     <img
                         src={chevron}

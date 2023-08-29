@@ -15,7 +15,7 @@ const HousingDisplay = () => {
     const { id } = useParams();
     const data = locationData.find((location) => location.id === id);
 
-    // On va séparer les strings en tableau après chaque points de la description du Collapse
+    // Bloc pour retourner à la ligne après chaque "." dans la description du collapse
     const descriptions = data.description
         .split(".")
         .filter((sentence) => sentence.trim() !== "");
