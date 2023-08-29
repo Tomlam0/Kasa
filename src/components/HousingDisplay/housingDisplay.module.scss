@@ -23,10 +23,22 @@
     }
 }
 
-.tags {
+.container {
     display: flex;
-    gap: 10px;
-    margin-top: 20px;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include mobile {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
 }
 
 .collapse {

@@ -9,9 +9,17 @@
     padding-inline: 22px;
     background: map-get($colors, primary);
     border-radius: 10px;
+
+    @include mobile {
+        height: 18px;
+    }
 }
 
 .text {
     @include font(14px, 500);
     color: map-get($colors, basic-text);
+
+    @include mobile {
+        @include font(10px, 500);
+    }
 }

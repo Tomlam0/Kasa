@@ -3,9 +3,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import locationData from "../../assets/data/logements.json";
+import fullStar from "../../assets/img/Icons/fullStar.svg";
 
 import Slideshow from "../Slideshow/Slideshow";
 import Tag from "../Tag/Tag";
+import Rate from "../Rate/Rate";
 import Collapse from "../Collapse/Collapse";
 
 import styles from "./housingDisplay.module.scss";
@@ -29,10 +31,15 @@ const HousingDisplay = () => {
 
             <h3 className={styles.location}>{data.location}</h3>
 
-            <div className={styles.tags}>
-                {data.tags.map((tag, index) => (
-                    <Tag key={index} title={tag} />
-                ))}
+            <div className={styles.container}>
+                <div className={styles.tags}>
+                    {data.tags.map((tag, index) => (
+                        <Tag key={index} title={tag} />
+                    ))}
+                </div>
+                <div className={styles.rate}>
+                    <Rate score={fullStar} rating={parseInt(data.rating, 10)} />
+                </div>
             </div>
 
             <div className={styles.collapse}>
