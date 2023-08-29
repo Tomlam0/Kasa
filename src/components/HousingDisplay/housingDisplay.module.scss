@@ -2,6 +2,7 @@
 
 .collapse {
     display: flex;
+    justify-content: space-between;
     gap: 76px;
     margin-top: 24px;
 
@@ -12,7 +13,7 @@
 
     // Cible directement les enfants div de .collapse
     > div {
-        width: 580px;
+        width: 100%;
 
         @include mobile {
             width: 100%;

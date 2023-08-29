@@ -48,7 +48,7 @@
     transition: max-height 0.4s ease-in-out;
 
     &.open {
-        max-height: 500px; // On applique une valeur suffisamment grande pour afficher tout le contenu
+        max-height: 1000px; // On applique une valeur suffisamment grande pour afficher tout le contenu
     }
 
     .text {

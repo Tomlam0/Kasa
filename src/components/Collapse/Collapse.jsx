@@ -35,13 +35,13 @@ const Collapse = ({ title, text }) => {
                         : styles.blockText
                 }
             >
-                <h3
+                <div
                     className={
                         isOpen ? `${styles.text} ${styles.open}` : styles.text
                     }
                 >
                     {text}
-                </h3>
+                </div>
             </div>
         </div>
     );
