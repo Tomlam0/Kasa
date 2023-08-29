@@ -24,6 +24,9 @@ const HousingDisplay = () => {
         <>
             <Slideshow image={data.pictures} title={data.title} />
 
+            <h2 className={styles.title}>{data.title}</h2>
+            <h3 className={styles.location}>{data.location}</h3>
+
             <div className={styles.collapse}>
                 <Collapse
                     title={"Description"}
