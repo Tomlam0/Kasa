@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import locationData from "../../assets/data/logements.json";
 
 import Slideshow from "../Slideshow/Slideshow";
+import Tag from "../Tag/Tag";
 import Collapse from "../Collapse/Collapse";
 
 import styles from "./housingDisplay.module.scss";
@@ -25,7 +26,14 @@ const HousingDisplay = () => {
             <Slideshow image={data.pictures} title={data.title} />
 
             <h2 className={styles.title}>{data.title}</h2>
+
             <h3 className={styles.location}>{data.location}</h3>
+
+            <div className={styles.tags}>
+                {data.tags.map((tag, index) => (
+                    <Tag key={index} title={tag} />
+                ))}
+            </div>
 
             <div className={styles.collapse}>
                 <Collapse
