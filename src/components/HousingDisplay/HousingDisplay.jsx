@@ -22,7 +22,7 @@ const HousingDisplay = () => {
 
     return (
         <>
-            <Slideshow />
+            <Slideshow image={data.pictures} title={data.title} />
 
             <div className={styles.collapse}>
                 <Collapse
