@@ -22,8 +22,8 @@ const Header = () => {
                         <NavLink
                             to="/home"
                             className={
-                                location.pathname === "/"
-                                    ? `${styles.link} ${styles.activeLink}`
+                                location.pathname === "/home"
+                                    ? `${styles.link} ${styles.active}`
                                     : styles.link
                             }
                         >
@@ -35,7 +35,7 @@ const Header = () => {
                             to="/about"
                             className={
                                 location.pathname === "/about"
-                                    ? `${styles.link} ${styles.activeLink}`
+                                    ? `${styles.link} ${styles.active}`
                                     : styles.link
                             }
                         >

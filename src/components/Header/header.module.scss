@@ -40,7 +40,7 @@
                     @include font(12px, 500);
                 }
 
-                &.activeLink {
+                &.active {
                     text-decoration: underline;
                 }
             }
