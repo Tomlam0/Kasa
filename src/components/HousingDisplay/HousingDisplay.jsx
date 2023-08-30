@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 import locationData from "../../assets/data/logements.json";
 import fullStar from "../../assets/img/Icons/fullStar.svg";
@@ -18,6 +18,11 @@ const HousingDisplay = () => {
     // useParams retourne un objet contenant les paramètres de l'URL actuelle
     const { id } = useParams();
     const data = locationData.find((location) => location.id === id);
+
+    // Si les id de logement sont incorrects, rediriger vers la page 404
+    if (!data) {
+        return <Navigate replace to="/404" />;
+    }
 
     // Bloc pour retourner à la ligne après chaque "." dans la description du collapse
     const descriptions = data.description

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
@@ -14,18 +14,19 @@ import "./base/typography.scss";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Layout>
                 {/* Si une erreur quelconque arrive en cours de route */}
                 <Routes errorElement={<NotFound />}>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Kasa" element={<Home />} />
+                    <Route path="/" element={<Navigate replace to="/home" />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/logement/:id" element={<Housing />} />
+                    <Route path="/404" element={<NotFound />} />
                     {/* Toute autres pages que celles mentionnées seront des pages d'erreur 404 */}
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>
-        </BrowserRouter>
+        </HashRouter>
     );
 }

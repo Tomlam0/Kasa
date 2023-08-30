@@ -13,7 +13,10 @@ const Error404 = () => {
             <p className={styles.tagline}>
                 Oups! La page que vous demandez n'existe pas.
             </p>
-            <p className={styles.backwardLink} onClick={() => navigate("/")}>
+            <p
+                className={styles.backwardLink}
+                onClick={() => navigate("/home")}
+            >
                 Retourner sur la page d’accueil
             </p>
         </div>

@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <header className={styles.container}>
-            <Link to="/Kasa">
+            <Link to="/home">
                 <img src={logo} className={styles.logo} alt="logo kasa" />
             </Link>
 
@@ -20,7 +20,7 @@ const Header = () => {
                 <ul className={styles.navlist}>
                     <li className={styles.item}>
                         <NavLink
-                            to="/Kasa"
+                            to="/home"
                             className={
                                 location.pathname === "/"
                                     ? `${styles.link} ${styles.activeLink}`
