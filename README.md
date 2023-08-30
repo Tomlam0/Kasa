@@ -13,4 +13,4 @@ Je m'occupe donc de la création en JavaScript avec NodeJS côté back-end, et R
 
 # Github Page
 
-https://github.com/Tomlam0/Kasa.git
+https://tomlam0.github.io/Kasa/
