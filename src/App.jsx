@@ -19,7 +19,7 @@ export default function App() {
                 {/* Si une erreur quelconque arrive en cours de route */}
                 <Routes errorElement={<NotFound />}>
                     <Route path="/" element={<Home />} />
-                    <Route path="/home" element={<Home />} />
+                    <Route path="/Kasa" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/logement/:id" element={<Housing />} />
                     {/* Toute autres pages que celles mentionnées seront des pages d'erreur 404 */}
