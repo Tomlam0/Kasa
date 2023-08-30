@@ -27,6 +27,7 @@
     }
 
     .chevron {
+        cursor: pointer;
         transition: 400ms ease-in-out;
 
         @include mobile {
