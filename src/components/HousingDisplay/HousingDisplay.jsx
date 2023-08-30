@@ -6,6 +6,7 @@ import locationData from "../../assets/data/logements.json";
 import fullStar from "../../assets/img/Icons/fullStar.svg";
 
 import Slideshow from "../Slideshow/Slideshow";
+import Host from "../Host/Host";
 import Tag from "../Tag/Tag";
 import Rate from "../Rate/Rate";
 import Collapse from "../Collapse/Collapse";
@@ -25,23 +26,39 @@ const HousingDisplay = () => {
 
     return (
         <>
+            {/* Carousel */}
             <Slideshow image={data.pictures} title={data.title} />
 
-            <h2 className={styles.title}>{data.title}</h2>
+            <div className={styles.mainContainer}>
+                <div className={styles.containerOne}>
+                    {/* Titre */}
+                    <h2 className={styles.title}>{data.title}</h2>
+                    {/* Localisation */}
+                    <h3 className={styles.location}>{data.location}</h3>
 
-            <h3 className={styles.location}>{data.location}</h3>
-
-            <div className={styles.container}>
-                <div className={styles.tags}>
-                    {data.tags.map((tag, index) => (
-                        <Tag key={index} title={tag} />
-                    ))}
+                    {/* Tags */}
+                    <div className={styles.tags}>
+                        {data.tags.map((tag, index) => (
+                            <Tag key={index} title={tag} />
+                        ))}
+                    </div>
                 </div>
-                <div className={styles.rate}>
-                    <Rate score={fullStar} rating={parseInt(data.rating, 10)} />
+
+                <div className={styles.containerTwo}>
+                    {/* Hote */}
+                    <Host name={data.host.name} picture={data.host.picture} />
+
+                    {/* Notes */}
+                    <div className={styles.rate}>
+                        <Rate
+                            score={fullStar}
+                            rating={parseInt(data.rating, 10)}
+                        />
+                    </div>
                 </div>
             </div>
 
+            {/* Collapses */}
             <div className={styles.collapse}>
                 <Collapse
                     title={"Description"}
