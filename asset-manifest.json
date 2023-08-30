@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Kasa/static/css/main.e903c6a1.css",
+    "main.js": "/Kasa/static/js/main.5f170598.js",
+    "static/media/banner-home.webp": "/Kasa/static/media/banner-home.1ce7e8850fc204eea591.webp",
+    "static/media/banner-about.webp": "/Kasa/static/media/banner-about.914f639deb2ff2709511.webp",
+    "static/media/montserrat-v25-latin-700.woff2": "/Kasa/static/media/montserrat-v25-latin-700.56c09b9a46af6a54eeb3.woff2",
+    "static/media/montserrat-v25-latin-500.woff2": "/Kasa/static/media/montserrat-v25-latin-500.38a674fae449557fef97.woff2",
+    "static/media/montserrat-v25-latin-regular.woff2": "/Kasa/static/media/montserrat-v25-latin-regular.acb6629fe45c43ad5d8b.woff2",
+    "index.html": "/Kasa/index.html",
+    "static/media/logo.svg": "/Kasa/static/media/logo.bb1ec2e6d0ecc29cee5eca0f225628e0.svg",
+    "static/media/logo-nb.svg": "/Kasa/static/media/logo-nb.2b5d25b68586b390cfba216f1337a940.svg",
+    "static/media/emptyStar.svg": "/Kasa/static/media/emptyStar.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
+    "static/media/fullStar.svg": "/Kasa/static/media/fullStar.30b8963e66a47777ef47296f505567be.svg",
+    "static/media/chevronUp.svg": "/Kasa/static/media/chevronUp.d914c2b5d878a1df026ceafdbfd8aeb1.svg",
+    "main.e903c6a1.css.map": "/Kasa/static/css/main.e903c6a1.css.map",
+    "main.5f170598.js.map": "/Kasa/static/js/main.5f170598.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e903c6a1.css",
+    "static/js/main.5f170598.js"
+  ]
+}
