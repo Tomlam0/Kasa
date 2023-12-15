@@ -19,7 +19,7 @@
 
     .text {
         color: map-get($colors, basic-text);
-        @include font(24px, 500);
+        @include font(16px, 500);
 
         @include mobile {
             @include font(12px);

@@ -25,11 +25,7 @@
         animation: fadeInUp 0.8s ease-in-out forwards;
 
         color: map-get($colors, basic-text);
-        @include font(48px, 500);
-
-        @include tablet {
-            @include font(36px, 500);
-        }
+        @include font(30px, 500);
 
         @include mobile {
             @include font(24px, 500);

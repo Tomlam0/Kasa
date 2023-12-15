@@ -13,6 +13,9 @@
     }
 
     .logo {
+
+        width: 150px;
+
         @include mobile {
             max-width: 35vw;
         }
@@ -29,7 +32,7 @@
         .item {
             .link {
                 color: map-get($colors, primary);
-                @include font(24px, 500);
+                @include font(18px, 500);
 
                 &:hover {
                     color: darken(map-get($colors, primary), 20);
